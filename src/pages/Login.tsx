@@ -8,7 +8,6 @@ function Login() {
     const login = useAppStore((s) => s.login);
     const navigate = useNavigate();
 
-
     return (
         <div className="min-h-dvh grid place-items-center bg-gradient-to-br from-pastel-sky/50 via-pastel-lilac/40 to-pastel-mint/50">
             <form

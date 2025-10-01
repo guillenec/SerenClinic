@@ -55,7 +55,7 @@ TYPE="${types[$((OPT-1))]}"
 EMOJI="${emojis[$((OPT-1))]}"
 
 # --- scope opcional ---
-printf "Scope (opcional, ej: appointments/ui) → "
+printf "Scope (opcional, ej: router, ui, appointments/form, vite, etc) → "
 read -r SCOPE
 SCOPE_FMT=""
 if [[ -n "${SCOPE// }" ]]; then
