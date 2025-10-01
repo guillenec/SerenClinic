@@ -5,10 +5,13 @@ import useAppStore from "../store/appStore";
 export default function WaitlistBoard() {
     const { waitlist, moveWaitlist, patients } = useAppStore();
 
-
-    const onDragEnd = (result: DropResult) => {
-        if (!result.destination) return;
-        moveWaitlist(result.source.index, result.destination.index);
+    // const onDragEnd = (result: DropResult) => {
+    //     if (!result.destination) return;
+    //     moveWaitlist(result.source.index, result.destination.index);
+    // };
+    const onDragEnd = ({ source, destination }: DropResult) => {
+        if (!destination) return;
+        moveWaitlist(source.index, destination.index);
     };
 
 
