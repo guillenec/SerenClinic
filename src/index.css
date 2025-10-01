@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* Diseño pastel, equivalente al config anterior */
+:root {
+  --color-pastel-sky: #A7D8F0;
+  --color-pastel-mint: #BEE7C8;
+  --color-pastel-lilac: #D9C7F1;
+  --color-pastel-peach: #FFD8C2;
+  --color-pastel-cream: #FFF2B2;
+  --color-pastel-cloud: #F5F7FA;
+
+  --shadow-soft: 0 10px 25px -10px rgba(30, 41, 59, .12);
+  --radius-xl2: 1rem;
+}
+
+@theme {
+  /* Configuración de Colores */
+  --color-pastel-sky: var(--color-pastel-sky);
+  --color-pastel-mint: var(--color-pastel-mint);
+  --color-pastel-lilac: var(--color-pastel-lilac);
+  --color-pastel-peach: var(--color-pastel-peach);
+  --color-pastel-cream: var(--color-pastel-cream);
+  --color-pastel-cloud: var(--color-pastel-cloud);
+
+  /* Configuración de Sombra (Box Shadow) */
+  --shadow-soft: var(--shadow-soft-value);
+
+  /* Configuración de Radio de Borde (Border Radius) */
+  --radius-xl2: var(--radius-xl2-value);
+}
+
+
+/* utilidades opcionales */
+.card {
+  background: white;
+  border-radius: var(--radius-xl2);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-xl2);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--color-pastel-sky);
+}
+
+.btn-primary:hover {
+  filter: brightness(95%);
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-pastel-cloud);
+}
+
+.input {
+  width: 100%;
+  border-radius: var(--radius-xl2);
+  border: 1px solid #e2e8f0;
+  background-color: white;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+}
+
+.input:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--color-pastel-sky);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  /* :root {
+    color: #213547;
+    background-color: #ffffff;
+  } */
+}
