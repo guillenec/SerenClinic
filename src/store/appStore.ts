@@ -35,10 +35,16 @@ const useAppStore = create<AppState>((set, get) => ({
     doctors: [
         { id: "d1", name: "Dra. Sofía Pérez", specialty: "Clínica", color: "#A7D8F0" },
         { id: "d2", name: "Dr. Martín Gómez", specialty: "Pediatría", color: "#BEE7C8" },
+        { id: "d3", name: "Dra. Laura Martínez", specialty: "Ginecología", color: "#FAD2CF" },
+        { id: "d4", name: "Dr. Carlos Rodríguez", specialty: "Cardiología", color: "#F0D8A7" },
+        { id: "d5", name: "Dra. Ana Díaz", specialty: "Dermatología", color: "#D8A7F0" }
     ],
     patients: [
         { id: "p1", name: "Juan Ramírez", docId: "34.567.890", phone: "+54 9 294 123", notes: "Alergia a penicilina" },
         { id: "p2", name: "Ana Díaz", docId: "29.111.222" },
+        { id: "p3", name: "Carlos Rodríguez", docId: "XX.333.444" },
+        { id: "p4", name: "Laura Martínez", docId: "XX.555.666" },
+        { id: "p5", name: "Sofía Pérez", docId: "XX.777.888" }
     ],
     appointments: [
         {

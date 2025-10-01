@@ -16,7 +16,7 @@ function Login() {
                     login(name, role);
                     navigate("/");
                 })}
-                className="card w-full max-w-md p-6 space-y-4"
+                className="card_neumorfism  w-full max-w-md p-6 space-y-4"
             >
                 <h1 className="text-2xl font-semibold">Ingresar</h1>
                 <label className="label">Nombre</label>

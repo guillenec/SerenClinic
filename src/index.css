@@ -11,6 +11,7 @@
 
   --shadow-soft: 0 10px 25px -10px rgba(30, 41, 59, .12);
   --radius-xl2: 1rem;
+
 }
 
 @theme {
@@ -29,6 +30,12 @@
   --radius-xl2: var(--radius-xl2-value);
 }
 
+.card_neumorfism {
+  border-radius: var(--radius-xl2);
+  background: linear-gradient(145deg, white, var(--color-pastel-cloud));
+  box-shadow: 12px 12px 34px #b0a1c3,
+    -12px -12px 34px #ffedff;
+}
 
 /* utilidades opcionales */
 .card {
@@ -41,7 +48,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border-radius: var(--radius-xl2);
+  border-radius: 7px;
   padding: 0.5rem 1rem;
   font-weight: 500;
   transition: all 0.2s;
@@ -61,7 +68,7 @@
 
 .input {
   width: 100%;
-  border-radius: var(--radius-xl2);
+  border-radius: 8px;
   border: 1px solid #e2e8f0;
   background-color: white;
   padding: 0.5rem 0.75rem;

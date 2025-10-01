@@ -7,6 +7,7 @@ export default function Dashboard() {
     const next = appointments[0];
     const patient = patients.find(p => p.id === next?.patientId);
 
+    console.log("paciente ", patient)
 
     return (
         <div className="space-y-6">
