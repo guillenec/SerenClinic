@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import Patients from "./pages/Patients";
 import PatientDetail from "./pages/PatientDetail";
 import Televisit from "./pages/Televisit";
-import Appointments from "./pages/Appointments"; // vista general (la usan admin/doctor)
+import Appointments from "./pages/Appointments";
 
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import DoctorDashboard from "./pages/doctor/DoctorDashboard";
