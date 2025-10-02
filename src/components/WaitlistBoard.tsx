@@ -14,9 +14,11 @@ export default function WaitlistBoard() {
         moveWaitlist(source.index, destination.index);
     };
 
+    console.log("pacientes -> ", patients);
+    console.log("waitlist -> ", waitlist);
 
     return (
-        <div className="space-y-3">
+        <div className="space-y-3 ">
             <h3 className="font-semibold">Lista de espera</h3>
             <DragDropContext onDragEnd={onDragEnd}>
                 <Droppable droppableId="waitlist">

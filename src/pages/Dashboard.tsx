@@ -11,14 +11,14 @@ export default function Dashboard() {
 
     return (
         <div className="space-y-6">
-            <section className="card p-5">
+            <section className="neumorphism-white p-5">
                 <h2 className="text-xl font-semibold">Hola {currentUser?.name} 👋</h2>
                 <p className="text-slate-600">Bienvenido/a al panel de <b>SerenClinic</b>.</p>
             </section>
 
 
             <section className="grid md:grid-cols-2 gap-4">
-                <div className="card p-5">
+                <div className="neumorphism-white p-5">
                     <h3 className="font-semibold mb-2">Próxima cita</h3>
                     {next ? (
                         <div>
@@ -27,12 +27,14 @@ export default function Dashboard() {
                         </div>
                     ) : <p>No hay citas.</p>}
                 </div>
-                <div className="card p-5">
+                <div className="neumorphism-white p-5">
                     <h3 className="font-semibold mb-2">Atajos</h3>
                     <ul className="list-disc pl-5 text-slate-600 space-y-1">
                         <li>Crear cita rápida</li>
                         <li>Abrir teleconsulta demo</li>
                         <li>Ver lista de espera</li>
+                        <li>Ver lista de pacientes</li>
+                        <li>Acceder a Agenda</li>
                     </ul>
                 </div>
             </section>

@@ -42,10 +42,10 @@ const useAppStore = create(persist<AppState>(
         ],
         patients: [
             { id: "p1", name: "Juan Ramírez", docId: "34.567.890", phone: "+54 9 294 123", notes: "Alergia a penicilina" },
-            { id: "p2", name: "Ana Díaz", docId: "29.111.222" },
-            { id: "p3", name: "Carlos Rodríguez", docId: "XX.333.444" },
-            { id: "p4", name: "Laura Martínez", docId: "XX.555.666" },
-            { id: "p5", name: "Sofía Pérez", docId: "XX.777.888" }
+            { id: "p2", name: "Ana Díaz", docId: "29.111.222", phone: "+54 9 294 456", notes: "Hipertensión" },
+            { id: "p3", name: "Carlos Rodríguez", docId: "XX.333.444", phone: "+54 9 294 789", notes: "Diabetes" },
+            { id: "p4", name: "Laura Martínez", docId: "XX.555.666", phone: "+54 9 294 012", notes: "Hipertensión" },
+            { id: "p5", name: "Sofía Pérez", docId: "XX.777.888", phone: "+54 9 294 345", notes: "Asma" }
         ],
         appointments: [
             {
@@ -57,13 +57,49 @@ const useAppStore = create(persist<AppState>(
                 type: "virtual",
                 status: "confirmed",
             },
+            {
+                id: "a2",
+                doctorId: "d2",
+                patientId: "p2",
+                startsAt: addMinutes(new Date(), 60).toISOString(),
+                endsAt: addMinutes(new Date(), 90).toISOString(),
+                type: "presencial",
+                status: "pending",
+            },
+            {
+                id: "a3",
+                doctorId: "d3",
+                patientId: "p4",
+                startsAt: addMinutes(new Date(), 120).toISOString(),
+                endsAt: addMinutes(new Date(), 150).toISOString(),
+                type: "virtual",
+                status: "confirmed",
+            },
+            {
+                id: "a4",
+                doctorId: "d4",
+                patientId: "p3",
+                startsAt: addMinutes(new Date(), 180).toISOString(),
+                endsAt: addMinutes(new Date(), 210).toISOString(),
+                type: "presencial",
+                status: "cancelled",
+            },
+            {
+                id: "a5",
+                doctorId: "d1",
+                patientId: "p5",
+                startsAt: addMinutes(new Date(), 240).toISOString(),
+                endsAt: addMinutes(new Date(), 270).toISOString(),
+                type: "virtual",
+                status: "confirmed",
+            }
         ],
         waitlist: [
             { id: "w1", patientId: "p2", reason: "Consulta prioritaria" },
-            { id: "w2", patientId: "XX", reason: "Consulta de seguimiento" },
-            { id: "w3", patientId: "XX", reason: "Consulta de seguimiento" },
-            { id: "w4", patientId: "XX", reason: "Consulta de seguimiento" },
-            { id: "w5", patientId: "XX", reason: "Consulta de seguimiento" }
+            { id: "w2", patientId: "p3", reason: "Consulta de seguimiento" },
+            { id: "w3", patientId: "p4", reason: "Consulta prioritaria" },
+            { id: "w4", patientId: "p1", reason: "Consulta de seguimiento" },
+            { id: "w5", patientId: "p5", reason: "Consulta de seguimiento" }
         ],
         login: (name, role) => set({ currentUser: { id: crypto.randomUUID(), name, role } }), // creamos id random
         logout: () => set({ currentUser: undefined }),

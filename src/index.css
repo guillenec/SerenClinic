@@ -33,8 +33,15 @@
 .card_neumorfism {
   border-radius: var(--radius-xl2);
   background: linear-gradient(145deg, white, var(--color-pastel-cloud));
-  box-shadow: 12px 12px 34px #b0a1c3,
-    -12px -12px 34px #ffedff;
+  box-shadow: 7px 7px 14px #b0a1c3,
+    -7px -7px 14px #ffedff;
+}
+
+.neumorphism-white {
+  border-radius: 8px;
+  background: #F5F7FA;
+  box-shadow: -5px -5px 12px #a2a3a5,
+    7px 7px 14px #ffffff;
 }
 
 /* utilidades opcionales */

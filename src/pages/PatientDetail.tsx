@@ -14,12 +14,12 @@ export default function PatientDetail() {
 
     return (
         <div className="space-y-4">
-            <section className="card p-4">
+            <section className="neumorphism-white p-4">
                 <h2 className="text-xl font-semibold">{p.name}</h2>
                 <p className="text-slate-600">Doc: {p.docId} · Tel: {p.phone || "—"}</p>
                 {p.notes && <p className="mt-2 text-slate-600">Notas: {p.notes}</p>}
             </section>
-            <section className="card p-4">
+            <section className="neumorphism-white p-4">
                 <h3 className="font-semibold mb-2">Historial (mock)</h3>
                 <ul className="space-y-2 text-sm">
                     {history.map(h => (
