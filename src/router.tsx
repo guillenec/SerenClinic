@@ -14,6 +14,7 @@ import MyAppointments from "./pages/patient/MyAppointments";
 
 import { RequireRole, RoleHome } from "./components/RoleGate";
 import useAppStore from "./store/appStore";
+import Register from './pages/Register';
 
 function RequireAuth({ children }: PropsWithChildren) {
   const user = useAppStore((s) => s.currentUser);
@@ -26,6 +27,7 @@ export default function AppRoutes() {
     <Routes>
       {/* pública */}
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
       {/* protegidas */}
       <Route element={<RequireAuth><App /></RequireAuth>}>
